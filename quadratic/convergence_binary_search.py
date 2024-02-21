@@ -25,7 +25,7 @@ alpha_min = alpha_bound*10**(-2)
 alpha_max = alpha_bound*10**(4)
 
 boundary_points = []
-alpha_step = 10**(2/1)
+alpha_step = 10**(1/20)
 current_alpha = alpha_max
 i = 0
 while current_alpha >= alpha_min*(1-10**(-6)):
@@ -34,7 +34,7 @@ while current_alpha >= alpha_min*(1-10**(-6)):
     low = gamma_min
     high = gamma_max
     solver_params['steps'] = 100000
-    while low < high*0.8:
+    while low < high*0.98:
         mid = np.sqrt(low*high)
         solver_params['lr_primal'] = current_alpha
         solver_params['lr_dual'] = current_alpha*mid
