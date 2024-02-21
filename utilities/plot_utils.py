@@ -102,7 +102,7 @@ def plot_contours_and_feasibility(Q,A,b,history_dicts):
 
     ax.plot(primal_iterates[0,0],primal_iterates[0,1],'ko',markerfacecolor='w')
     ax.plot(primal_iterates[-1,0],primal_iterates[-1,1],'k*')
-    ax.set_xlabel(r'$\alpha$')
+    ax.set_xlabel(r'$\theta_1$')
     ax.set_ylabel(r'$\theta_2$')
     ax.legend(loc='upper center', bbox_to_anchor=(0.5, 1.35), ncol=2)
     plt.tight_layout()
